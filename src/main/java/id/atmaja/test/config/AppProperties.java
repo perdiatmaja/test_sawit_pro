@@ -26,15 +26,11 @@ public class AppProperties extends Properties {
 
     private static final String BANNER_MODE = "off";
 
-    private static final String DB = "jdbc:postgresql://" + EnvConfig.DB_HOST + "/" + EnvConfig.DB_NAME;
-
     private static final String CORS_ALLOWED_KEY = "endpoints.cors.allowed-origins";
 
     private static final String LOGGING_FILE_KEY = "logging.file";
 
     public AppProperties() {
-        put(SERVER_PORT, EnvConfig.SERVER_PORT);
-        put(DDL_AUTO, EnvConfig.DDL_AUTO);
         put(BANNER_MODE_KEY, BANNER_MODE);
         setDBConfig();
         setNamingStrategy();
@@ -45,9 +41,6 @@ public class AppProperties extends Properties {
     }
 
     private void setDBConfig() {
-        put(DATASOURCE_URL, DB);
-        put(DATASOURCE_USERNAME, EnvConfig.DB_USERNAME);
-        put(DATASOURCE_PASSWORD, EnvConfig.DB_PASSWORD);
     }
 
     private void setNamingStrategy() {

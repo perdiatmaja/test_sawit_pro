@@ -16,8 +16,12 @@ import java.util.List;
 @RequestMapping("/v1/user")
 public class UserController {
 
-    @Autowired
     private UserService userService;
+
+    @Autowired
+    public UserController(final UserService userService) {
+        this.userService = userService;
+    }
 
     @PostMapping("/login")
     public BaseResponse<String> login(@RequestBody final LoginRequest loginRequest) throws NoSuchAlgorithmException {
@@ -35,7 +39,7 @@ public class UserController {
     }
 
     @PostMapping()
-    public BaseResponse<UserModel> getUser(@RequestBody final UserModel userModel) {
+    public BaseResponse<UserModel> add(@RequestBody final UserModel userModel) {
         return userService.add(userModel);
     }
 

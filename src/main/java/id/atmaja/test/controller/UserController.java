@@ -1,6 +1,5 @@
 package id.atmaja.test.controller;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
 import id.atmaja.test.base.BaseResponse;
 import id.atmaja.test.builder.ResponseBuilder;
 import id.atmaja.test.controller.request.LoginRequest;

@@ -1,7 +1,5 @@
 package id.atmaja.test.service;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import id.atmaja.test.base.BaseResponse;
 import id.atmaja.test.builder.ResponseBuilder;
 import id.atmaja.test.controller.request.LoginRequest;
@@ -55,6 +53,7 @@ public class UserService {
         if (optionalUserModel.isEmpty()) {
             return ResponseBuilder.error("2000", "User not Found");
         }
+
         final UserModel dbUserModel = optionalUserModel.get();
 
         dbUserModel.merge(userModel);

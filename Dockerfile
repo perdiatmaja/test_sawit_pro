@@ -1,7 +1,7 @@
-FROM adoptopenjdk/openjdk11:alpine-jre
+FROM eclipse-temurin:17-jdk-alpine
 
-WORKDIR /opt/app
-ARG JAR_FILE=target/spring-boot-web.jar
+WORKDIR /usr/app
+ARG JAR_FILE=./target/spring-boot-web.jar
 
-COPY ./target/test-0.0.1-SNAPSHOT.jar app.jar
+COPY JAR_FILE app.jar
 ENTRYPOINT ["java","-jar","app.jar"]

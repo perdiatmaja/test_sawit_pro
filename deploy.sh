@@ -3,5 +3,6 @@ export JAVA_HOME
 PATH=$JAVA_HOME/bin:$PATH
 export PATH
 
+mvn clean
 mvn install
 docker-compose up -d --build

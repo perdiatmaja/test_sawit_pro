@@ -26,7 +26,7 @@ public class AppProperties extends Properties {
 
     private static final String BANNER_MODE = "off";
 
-    private static final String DB = "jdbc:mysql://" + EnvConfig.DB_HOST + "/" + EnvConfig.DB_NAME;
+    private static final String DB = "jdbc:postgresql://" + EnvConfig.DB_HOST + "/" + EnvConfig.DB_NAME;
 
     private static final String CORS_ALLOWED_KEY = "endpoints.cors.allowed-origins";
 
